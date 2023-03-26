@@ -6,7 +6,7 @@ This repository provides an easy way to add a handy entry into the POV-Ray tools
 - Download the code from Github to your computer
 - Unzip the files in a directory of your choice
 - Navigate to the install directory
-- Run either the install.bat of the install_no_admin.bat. To learn why the installer needs admin privileges and why it might not read: [Why does the installer need admin privileges](README.md#why-does-the-installer-need-admin-privileges?)
+- Run either the install.bat of the install_no_admin.bat. To learn why the installer needs admin privileges and why it might not read: [Why does the installer need admin privileges](README.md#why-does-the-installer-need-admin-privileges)
 - Wait for the installer to finish
 - Start POV-Ray
 - Under the tools menu click "Render video" to render the last animation you made
