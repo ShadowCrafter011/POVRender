@@ -17,6 +17,7 @@ def main():
     py_render_path = os.path.abspath(os.path.join(install_path, "../render/render.py")).replace("/", "\\")
     bat_render_path = os.path.abspath(os.path.join(install_path, "../render/render.bat")).replace("/", "\\")
     pvtools_path = os.path.join(doc_path, "ini/pvtools.ini")
+    pvtools_backup_path = os.path.join(doc_path, "ini/pvtools.backup.ini")
 
     os.system("py -m pip install --user virtualenv")
     os.system(f"py -m venv {venv_path}")
@@ -29,8 +30,9 @@ def main():
     with open(pvtools_path, "r") as pvtools:
         pvtools_lines = pvtools.readlines()
 
-    with open(os.path.join(doc_path, "ini/pvtools.backup.ini"), "w") as pvtools_backup:
-        pvtools_backup.writelines(pvtools_lines)
+    if not os.path.exists(pvtools_backup_path):
+        with open(pvtools_backup_path, "w") as pvtools_backup:
+            pvtools_backup.writelines(pvtools_lines)
 
     indexed_items = {}
     for x in range(int(1e6)):
