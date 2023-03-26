@@ -30,7 +30,7 @@ def main():
 		print("Exiting...")
 		wait_exit()
 
-	render_path = os.path.join(path, "render")
+	render_path = os.path.join(path, "renders")
 	if not os.path.exists(render_path):
 		os.mkdir(render_path)
 
@@ -59,7 +59,6 @@ def main():
 	cap.release()
 	cv2.destroyAllWindows()
 
-	print(rf'explorer /select,"{video_path}"')
 	subprocess.Popen(rf'explorer /select,"{video_path}"')
 
 if __name__ == "__main__":
